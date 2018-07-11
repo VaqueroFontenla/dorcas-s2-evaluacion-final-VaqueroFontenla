@@ -9,7 +9,6 @@ var filmFoundedPlace = document.querySelector('.js-film-container');
 function search (){
   var filmTitle = inputSearch.value;
   var url = 'http://api.tvmaze.com/search/shows?q='+filmTitle;
-  console.log(url);
   fetch(url)
     .then(function(response){
       return response.json();
@@ -17,17 +16,31 @@ function search (){
     .then(function(json){
       for (var i = 0; i<json.length; i++) {
         var filmFounded = json[i].show;
-        console.log(json[i].show);
+        //Para el titulo
         var titleName = filmFounded.name;
         var titleFoundName = createp(titleName);
         filmFoundedPlace.appendChild(titleFoundName);
+
+
+        //Para la imagen
+        var img = document.createElement('img');
         var imgFilm = filmFounded.image;
+        console.log(imgFilm);
+        var mediumImgFilm = imgFilm.medium;
+        var originalImgFilm = imgFilm.original;
+        var noFoundImg = 'https://via.placeholder.com/210x295/cccccc/666666/?text=TV';
+        if (imgFilm != null) {
+        if (mediumImgFilm = undefined) {
+          img.src = originalImgFilm;
+        } else {
+        img.src=mediumImgFilm;
+        }
+      } else {
+        img.src = noFoundImg;
 
-
+        filmFoundedPlace.append(titleFoundName,img);
       }
 
-      // console.log(titleFound);
-      // console.log(posterFound);
     });
 }
 
