@@ -3,11 +3,13 @@
 var buttonSearch = document.querySelector('.js-btnSearch');
 var inputSearch = document.querySelector('.js-inputSearch');
 var filmFoundedPlace = document.querySelector('.js-film-container');
-
+var contenedorDelInfierno;
+var cardContainer = document.querySelector('.favourite');
 
 
 
 function search (){
+  filmFoundedPlace.innerHTML = '';
   var filmTitle = inputSearch.value;
   var url = 'http://api.tvmaze.com/search/shows?q='+filmTitle;
   fetch(url)
@@ -17,11 +19,10 @@ function search (){
     .then(function(json){
       for (var i = 0; i<json.length; i++) {
         var filmFounded = json[i].show;
+
         //Para el titulo
         var titleName = filmFounded.name;
         var titleFoundName = createp(titleName);
-        //filmFoundedPlace.appendChild(titleFoundName);
-
 
         //Para la imagen
         var img = document.createElement('img');
@@ -38,8 +39,12 @@ function search (){
         } else {
           img.src = noFoundImg;
         }
-        var contenedorDelInfierno = creatediv(titleFoundName,img);
-        console.log(contenedorDelInfierno);
+        contenedorDelInfierno = creatediv(titleFoundName,img);
+        contenedorDelInfierno.classList.add('nofavourite');
+        contenedorDelInfierno.addEventListener('click', addFavorite);
+
+
+        //console.log(contenedorDelInfierno);
         filmFoundedPlace.append(contenedorDelInfierno);
       }
     });
@@ -48,7 +53,9 @@ function search (){
 // Crear div tarjetas
 function creatediv (titleCard, imgCard) {
   var div = document.createElement('div');
+  //div.addEventListener('click', addFavorite);
   div.append(titleCard, imgCard);
+
   return div;
 }
 // Crear parrafo
@@ -61,3 +68,9 @@ function createp (content){
 
 
 buttonSearch.addEventListener('click', search);
+
+//Peliculas favoritas
+function addFavorite (e) {
+  var currentFilm = e.currentTarget;
+  currentFilm.classList.add('favourite');
+}
