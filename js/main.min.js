@@ -6,6 +6,7 @@ var filmFoundedPlace = document.querySelector('.js-film-container');
 
 
 
+
 function search (){
   var filmTitle = inputSearch.value;
   var url = 'http://api.tvmaze.com/search/shows?q='+filmTitle;
@@ -19,7 +20,7 @@ function search (){
         //Para el titulo
         var titleName = filmFounded.name;
         var titleFoundName = createp(titleName);
-        filmFoundedPlace.appendChild(titleFoundName);
+        //filmFoundedPlace.appendChild(titleFoundName);
 
 
         //Para la imagen
@@ -37,12 +38,19 @@ function search (){
         } else {
           img.src = noFoundImg;
         }
-        filmFoundedPlace.append(titleFoundName,img);
+        var contenedorDelInfierno = creatediv(titleFoundName,img);
+        console.log(contenedorDelInfierno);
+        filmFoundedPlace.append(contenedorDelInfierno);
       }
     });
 }
 
-
+// Crear div tarjetas
+function creatediv (titleCard, imgCard) {
+  var div = document.createElement('div');
+  div.append(titleCard, imgCard);
+  return div;
+}
 // Crear parrafo
 function createp (content){
   var p = document.createElement('p');
