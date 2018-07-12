@@ -10,13 +10,8 @@ var arraySeries = [];
 
 function search() {
   filmFoundedPlace.innerHTML = '';
-  var storage = localStorage.getItem('series');
-
-  // if (storage.includes('undefined')) {
-  //
-  //
-  // }
-
+  var storage = localStorage.getItem('id series', JSON.parse(arraySeries));
+  console.log(storage);
   var filmTitle = inputSearch.value;
   var url = 'http://api.tvmaze.com/search/shows?q=' + filmTitle;
   fetch(url)
@@ -98,26 +93,16 @@ function addFavorite(e) {
   //currentFilm.classList.toggle('favourite');
   if (currentFilm.classList.contains('nofavourite')) {
     currentFilm.classList.add('favourite');
+    currentFilm.classList.remove('nofavourite');
     arraySeries.push(idFilm);
     localStorage.setItem('id series',JSON.stringify(arraySeries));
   } else if (currentFilm.classList.contains('favourite')){
+    currentFilm.classList.remove('favourite');
     currentFilm.classList.add('nofavourite');
-    arraySeries.delete(idFilm);
-    localStorage.removeItem('id series',JSON.parse(arraySeries));
+    var indexIdFilm = arraySeries.indexOf(idFilm);
+    arraySeries.splice(indexIdFilm,1);
+    localStorage.setItem('id series',JSON.stringify(arraySeries));
   }
-
-
-  //
-  // if (currentFilm.classList.contains('nofavourite')) {
-  //   localStorage.removeItem('id series');
-  //   //console.log('bhstbstb',localStorage.removeItem('id series',JSON.stringify(arraySeries)));
-  // } else if (currentFilm.classList.contains('favourite')){
-  //   arraySeries.push(idFilm);
-  //   localStorage.setItem('id series',JSON.stringify(arraySeries));
-  // }
-
-
-  console.log(arraySeries);
 
   }
   console.log(arraySeries);
