@@ -7,6 +7,7 @@
 .wrapper {
   width: 100%;
   height: 100vh;
+  position: relative;
   text-align: center;
   background-color: #e7e1ef;
 }
@@ -24,7 +25,7 @@
   align-items: center;
   background: -webkit-gradient(linear, left top, left bottom, from(purple), to(pink));
   background: linear-gradient(to bottom, purple, pink);
-  padding: 25px 50px;
+  padding: 15px 30px;
   background: linear-gradient(to bottom, purple, pink);
 }
 
@@ -41,22 +42,24 @@
   align-items: center;
   background: -webkit-gradient(linear, left top, left bottom, from(purple), to(pink));
   background: linear-gradient(to bottom, purple, pink);
-  padding: 25px 50px;
+  padding: 15px 30px;
   background: -webkit-gradient(linear, left top, left bottom, from(yellow), to(green));
   background: linear-gradient(to bottom, yellow, green);
   border: 4px solid black;
+}
+
+.main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .film-container {
   padding: 20px;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: auto;
   grid-gap: 20px;
-}
-
-.imgContainer {
-  border: 2px solid purple;
-  padding: 0;
 }
 
 .titleContainer {
@@ -79,10 +82,40 @@
   font-size: 20px;
 }
 
+.searchContainer {
+  padding: 10px;
+}
+
+.inputSearch {
+  border: 2px solid pink;
+  color: purple;
+  height: 30px;
+  font-family: "Gaegu", cursive;
+  font-size: 20px;
+}
+
+.footer {
+  width: 100%;
+  height: 10%;
+  position: absolute;
+  bottom: 0;
+  border-top: 3px solid purple;
+  padding-top: 10px;
+  font-family: "Gaegu", cursive;
+  font-size: 20px;
+  color: purple;
+  font-weight: 700;
+}
+
 .btnSearch {
   background-color: purple;
-  border-radius: 4px;
+  border-radius: 8px;
   color: #e7e1ef;
+  font-weight: 700;
+  height: 30px;
+  width: 70px;
+  text-align: center;
+  border: 2px solid pink;
 }
 
 /*# sourceMappingURL=main.css.map */

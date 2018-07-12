@@ -13,5 +13,13 @@
   font-size: $fontsize-s;
 }
 .searchContainer {
+  padding: 10px;
+}
 
+.inputSearch {
+  border: 2px solid $color-secondary;
+  color: $color-primary;
+  height: 30px;
+  font-family: $fontPrimary;
+  font-size: $fontsize-s;
 }

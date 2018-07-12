@@ -1,0 +1,12 @@
+.footer {
+  width: 100%;
+  height: 10%;
+  position: absolute;
+  bottom: 0;
+  border-top: 3px solid $color-primary;
+  padding-top: 10px;
+  font-family: $fontPrimary;
+	font-size: $fontsize-s;
+	color: $color-primary;
+	font-weight: $fontFat;
+}
