@@ -6,6 +6,21 @@ El ejercicio consiste en desarrollar una aplicación web de búsqueda de series 
 se aveluarán los conocimientos de JavaScript adquiridos durante el sprint. El ejercicio también
 tiene una parte de maquetación con HTML y Sass.
 
+## Sobre la autora:
+
+Puedes espiarme en:
+
+<a href="https://www.linkedin.com/in/loretovaquerofontenla/">
+  <img src="images/linkedin.svg" alt="linkedin">
+</a>
+<a href="https://twitter.com/">
+  <img src="images/twitter.svg" alt="twitter">
+</a>
+<a href="https://github.com/VaqueroFontenla">
+  <img src="images/github.svg" alt="github">
+</a>
+
+
 ## Hito 01:
 Maquetación básica:
 
@@ -34,17 +49,3 @@ Se modifica la apariencia de la página propuesta levemente.
 localStorage:
 
 Se deben guardar las favoritas en el localStorage. Funcionalidad que buscamos: por ejemplo busco Girls, entre los resultados marco una serie como favorita, hago una busqueda diferente y cambian los resultados, vuelvo a buscar Girls y veo que la serie que marqué como favorita está marcada ;)
-
-## Sobre la autora:
-
-Puedes espiarme en:
-
-<a href="https://www.linkedin.com/in/loretovaquerofontenla/">
-  <img src="images/linkedin.svg" alt="">
-</a>
-<a href="https://twitter.com/">
-  <img src="images/twitter.svg" alt="">
-</a>
-<a href="https://github.com/VaqueroFontenla">
-  <img src="images/github.svg" alt="">
-</a>
