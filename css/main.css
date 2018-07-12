@@ -62,10 +62,6 @@
   grid-gap: 20px;
 }
 
-.imgContainer {
-  background-size: cover;
-}
-
 .titleContainer {
   display: block;
   font-family: "Gaegu", cursive;

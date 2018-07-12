@@ -17,7 +17,6 @@ $colorBlue: red;
 }
 
 .nofavourite {
-
   @include beautifulCard ();
  	background: linear-gradient(to bottom, $color-primary, $color-secondary);
 }
@@ -37,11 +36,6 @@ $colorBlue: red;
 	grid-gap: 20px;
 }
 
-.imgContainer {
-	//width: 100px;
-	//background-image: url (img.scr)
-	background-size: cover;
-}
 
 .titleContainer {
 	display: block;
