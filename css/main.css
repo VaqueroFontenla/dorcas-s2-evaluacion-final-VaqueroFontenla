@@ -1,11 +1,14 @@
-body {
-  width: 100%;
-  height: 100vh;
+* {
   margin: 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 .wrapper {
   width: 100%;
+  height: 100vh;
+  text-align: center;
+  background-color: #e7e1ef;
 }
 
 .nofavourite {
@@ -21,23 +24,65 @@ body {
   align-items: center;
   background: -webkit-gradient(linear, left top, left bottom, from(purple), to(pink));
   background: linear-gradient(to bottom, purple, pink);
+  padding: 25px 50px;
+  background: linear-gradient(to bottom, purple, pink);
 }
 
 .favourite {
-  background-color: red;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background: -webkit-gradient(linear, left top, left bottom, from(purple), to(pink));
+  background: linear-gradient(to bottom, purple, pink);
+  padding: 25px 50px;
+  background: -webkit-gradient(linear, left top, left bottom, from(yellow), to(green));
+  background: linear-gradient(to bottom, yellow, green);
   border: 4px solid black;
 }
 
 .film-container {
   padding: 20px;
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 200px));
+  grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-gap: 20px;
 }
 
 .imgContainer {
-  width: 100px;
-  background-size: cover;
+  border: 2px solid purple;
+  padding: 0;
+}
+
+.titleContainer {
+  display: block;
+  font-family: "Gaegu", cursive;
+  font-size: 30px;
+  color: purple;
+  font-weight: 700;
+  width: 210px;
+}
+
+.title {
+  font-family: "Coda Caption", sans-serif, cursive;
+  font-weight: 700;
+  font-size: 50px;
+}
+
+.label {
+  font-family: "Gaegu", cursive;
+  font-size: 20px;
+}
+
+.btnSearch {
+  background-color: purple;
+  border-radius: 4px;
+  color: #e7e1ef;
 }
 
 /*# sourceMappingURL=main.css.map */

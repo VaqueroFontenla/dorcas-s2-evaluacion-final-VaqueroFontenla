@@ -1,0 +1,7 @@
+@mixin beautifulCard () {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: linear-gradient(to bottom, $color-primary, $color-secondary);
+  padding: 25px 50px;
+}

@@ -1,0 +1,57 @@
+$colorBlue: red;
+
+* {
+	margin: 0;
+	box-sizing: border-box;
+}
+
+.wrapper {
+  width: 100%;
+	height: 100vh;
+	text-align: center;
+	background-color: $background-primary;
+
+}
+
+.nofavourite {
+	@include beautifulCard ();
+  background: linear-gradient(to bottom, $color-primary, $color-secondary);
+
+
+}
+
+.favourite {
+	@include beautifulCard ();
+	background: linear-gradient(to bottom, $color-primary-focus, $color-secondary-focus);
+  border: 4px solid black;
+
+}
+
+
+.film-container {
+  padding: 20px;
+  display: grid;
+  //grid-template-columns: repeat(auto-fill, minmax(200px,200px));
+	grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 20px;
+
+}
+
+.imgContainer {
+	border: 2px solid purple;
+	padding: 0;
+  //width: 100px;
+  //background-image: url (img.scr)
+  //background-size: cover;
+}
+
+.titleContainer {
+	display: block;
+	font-family: $fontPrimary;
+	font-size: $fontsize-m;
+	color: $color-primary;
+	font-weight: $fontFat;
+	width: 210px;
+
+
+}

@@ -1,2 +1,10 @@
-@import 'core/home';
+//core
+@import 'core/variables';
+@import 'core/mixins';
+//pages
+@import 'pages/home';
+//layout
+@import 'layout/header';
+@import 'layout/footer';
+//components
 @import 'components/buttons';
