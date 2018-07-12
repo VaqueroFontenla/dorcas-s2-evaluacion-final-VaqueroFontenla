@@ -1,49 +1,46 @@
 $colorBlue: red;
 
 * {
-	margin: 0;
-	padding: 0;
-	box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 .wrapper {
   max-width: 100vw;
-	min-height: 100vh;
-	display: grid;
-	grid-template-rows: 20% auto 80px;
-	flex-direction: column;
-	text-align: center;
+  min-height: 100vh;
+  display: grid;
+  grid-template-rows: 20% auto 80px;
+  flex-direction: column;
+  text-align: center;
   background-color: $background-primary;
-	// background-image: url('../../images/descarga.png');
-	// background-size: cover;
 }
 
 .nofavourite {
-	@include beautifulCard ();
-  background: linear-gradient(to bottom, $color-primary, $color-secondary);
+
+  @include beautifulCard ();
+ 	background: linear-gradient(to bottom, $color-primary, $color-secondary);
 }
 
 .favourite {
 	@include beautifulCard ();
 	background: linear-gradient(to bottom, $color-primary-focus, $color-secondary-focus);
-  border: 4px solid black;
-
+	border: 4px solid black;
 }
 
-
 .film-container {
-  padding: 20px;
-  display: grid;
-  //grid-template-columns: repeat(auto-fill, minmax(275px, 1fr));
+	padding: 20px;
+	display: grid;
+	//grid-template-columns: repeat(auto-fill, minmax(275px, 1fr));
 	grid-template-columns: 1fr 1fr 1fr 1fr;
 	grid-template-rows: auto;
-  grid-gap: 20px;
+	grid-gap: 20px;
 }
 
 .imgContainer {
-  //width: 100px;
-  //background-image: url (img.scr)
-  background-size: cover;
+	//width: 100px;
+	//background-image: url (img.scr)
+	background-size: cover;
 }
 
 .titleContainer {
@@ -53,5 +50,4 @@ $colorBlue: red;
 	color: $color-primary;
 	font-weight: $fontFat;
 	width: 210px;
-
 }

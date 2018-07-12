@@ -1,7 +1,14 @@
 ![Adalab](images/logo-adalab-80px.png)
-# Adalab web starter kit
-Ahoy! Esta es nuestro Starter Kit en node/gulp para este primer contacto con el desarrollo web
-Incluye SCSS y un web server.
+
+# Adalab Prueba Final Sprint 2
+
+El ejercicio consiste en desarrollar una aplicación web de búsqueda de series de TV, donde
+se aveluarán los conocimientos de JavaScript adquiridos durante el sprint. El ejercicio también
+tiene una parte de maquetación con HTML y Sass.
+
+## Hito 01:
+Maquetación básica
+![MaquetacionBasica]('images/Readme_1.png')
 
 ## Guía de inicio rápido
 Necesitarás instalar [Node.js](https://nodejs.org/) y [Gulp](https://gulpjs.com) para trabajar con este Starter Kit, luego:  
