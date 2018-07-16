@@ -5,22 +5,24 @@ var inputSearch = document.querySelector('.js-inputSearch');
 var filmFoundedPlace = document.querySelector('.js-film-container');
 var cardContainer;
 var arraySeries = [];
-
-
+var busqueda=document.querySelector('.busqueda');
 
 function search() {
   filmFoundedPlace.innerHTML = '';
   //var storage = localStorage.getItem('id series', JSON.parse(arraySeries));
   //console.log(storage);
   var filmTitle = inputSearch.value;
-  var url = 'http://api.tvmaze.com/search/shows?q=' + filmTitle;
+  var url = 'http://api.tvmaze.com/search/people?q=' + filmTitle;
   fetch(url)
     .then(function(response) {
       return response.json();
     })
     .then(function(json) {
+      var numerosBusquedas = json.length;
+      busqueda.innerHTML = 'Se ha encontrado ' + numerosBusquedas +' resultados para la búsqueda de ' +filmTitle;
+      console.log(json);
       for (var i = 0; i < json.length; i++) {
-        var filmFounded = json[i].show;
+        var filmFounded = json[i].person;
 
         // Recoger id
         var id = filmFounded.id;
